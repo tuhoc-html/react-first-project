@@ -2,22 +2,23 @@ import React from "react";
 
 class MyComponent extends React.Component {
   state = {
-    name: "Ronaldo",
+    name: "",
     channel: "Hoi Dap IT",
   };
 
   handleOnChangeName = (event) => {
     this.setState({
       name: event.target.value,
+      channel: "TFT",
     });
   };
 
   handleClickButton = () => {
-    console.log("Hit the button");
     alert("Click me");
   };
 
   render() {
+    console.log(">>> call render: ", this.state);
     return (
       <>
         <div className="first">
